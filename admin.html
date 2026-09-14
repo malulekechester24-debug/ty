@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin - Chester Logistics</title>
+<link href="https://secure-web.cisco.com/1C8FsA1uQXHieuI-Zbmf9Et1QH10RUEhAMsmh5ni-CTWXrFhU0EB9RHdkPmWekbppFEIEzI2ikWzUtU1hRlPglaXdKJa_ex2X_5guqSYXeoJcPMcGuUHZlbX0Xf3s8WuriC8tGlaeEN4erpocdzxZHK4WygEeBDYF0PUyVf5J3s9_6lcloGe5jCa7i015zN_20XU2U8zunupwyNUJmpgz7Lw96gNHz05s4twGJEWNH6P28aJy2dYWKZFMMpWTM2kDFPnatud9OJ8mzhbUbRM8FsSPKJpF-2mBkOuCNXp5cLiB0Fo3JIVfb2FMwtMCJp_PTgpbCRjs-AJigj6Y0k6zkS_DvMD35pkaGm2CYS1HzeA/https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPlus%2BJakarta%2BSans%3Awght%40700%3B800%26family%3DInter%3Awght%40400%3B500%26display%3Dswap" rel="stylesheet">
+<script type="importmap">{"imports":{"firebase/app":"https://secure-web.cisco.com/1XhmD5NpR1kz33L9HTytBfcAZTuJzGKlRubsl5P9kUCN3nL0uF1vN5I3vs_lnPtA-48xEhu1FAe7nypzN-i388ZSQVLwp5k7cGNIKnfeW8fcCyHelt3Wg__v5OujcmbkmyxJPYJcbXYPynt9mCG0B6ngzkq-mBdRl0nnUcmcbdyh8YABB3VRDVLf8weSg0W8-dEbkICOgjBrCOHwE8d_M_5nKCQoMvRhqufWx1Ic0eVbdsErk8N9kr1AAOkx2pZwEonUKCPucxkJRzwS4b_c74Qn9k7ytsEofTZ-ypTilNDqsPk_-JHHpdb73Da3s7YWzRlbKblqNRf90AlPnhoE6E0c1921FtF6LrtIApwelrYc/https%3A%2F%2Fwww.gstatic.com%2Ffirebasejs%2F10.7.1%2Ffirebase-app.js","firebase/firestore":"https://secure-web.cisco.com/1g0RCOckqBKEhy7qfmS9q6ZN2Bl_ccDkYBS60oMpya6sTGpg4qmtOjBz4CR56XV9IiC49LET8_mYayfmPOfqxDyFaL5N0aio6FKWhXH6xQRC9dbWBLUkLMDiSjNhrKbUcRzUZDoTBz2qEc1pL-B3kfxwm8-TOpBvDSRyFmhsDHvYLGz3o7lQLxwHqvhHEYoE0DNraLCmK-oc-alzJqHelzjgZZ0wvl9-woU5zFtV5Q_XTgSxxebcuI2DCAyQ39Q7ZEQoDuVW3MRkaHbOFkPveNTmWafBWw8z9DQpWhwTaS1J3iHUlh_MTwUgUsKlPYGZJTOAr4gC6avzVS2VaZWDTQEVnF7XLyLVNY5yg6E4jxW0/https%3A%2F%2Fwww.gstatic.com%2Ffirebasejs%2F10.7.1%2Ffirebase-firestore.js"}}</script>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter;background:#0B2F3A;color:#fff;min-height:100vh;padding:20px}:root{--orange:#FF6A00}
+.card{background:#fff;color:#0f172a;max-width:520px;margin:30px auto;padding:28px;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+h1{font-family:'Plus Jakarta Sans';text-align:center}input,select,textarea{width:100%;padding:12px 14px;border:1px solid #e2e8f0;border-radius:10px;margin:7px 0;font-family:inherit}input:focus{border-color:var(--orange);outline:none}
+button{background:var(--orange);color:#fff;border:0;padding:13px;width:100%;border-radius:10px;font-weight:800;cursor:pointer;font-size:16px}
+.logo{font-family:'Plus Jakarta Sans';font-weight:800;font-size:26px;text-align:center;margin-bottom:10px}.logo span{color:var(--orange)}
+.ok{background:#f0fdf4;border:1px solid #bbf7d0;padding:12px;border-radius:8px;margin-top:12px;color:#166534}
+</style></head><body>
+<div class="logo">Chester <span>Logistics</span> - Admin</div>
+<h1 style="font-size:18px;text-align:center;opacity:.8">Create Real Tracking ID - Firebase LIVE</h1>
+
+<div class="card">
+<input id="pin" type="password" placeholder="Admin PIN (1234)">
+<input id="id" placeholder="Tracking ID e.g. CH-2026-010 (UPPERCASE)">
+<input id="customer" placeholder="Customer Name e.g. Thabo Molefe">
+<input id="from" placeholder="From e.g. Pan Africa Mall, Alexandra">
+<input id="to" placeholder="To e.g. Soweto, Pimville">
+<input id="item" placeholder="Item e.g. Fridge + Couch - 800kg">
+<select id="status"><option>Booked</option><option>Picked Up</option><option>In Transit</option><option>Out for Delivery</option><option>Delivered</option></select>
+<input id="phone" placeholder="Customer Phone e.g. 0655812089">
+<button onclick="save()">💾 Save to Firebase Cloud</button>
+<div id="msg"></div>
+<div style="margin-top:14px;font-size:12px;color:#64748b">After saving, go to homepage and track <b id="demoId">CH-2026-010</b> - it will show LIVE FROM CLOUD!</div>
+<div style="text-align:center;margin-top:16px"><a href="index.html" style="color:var(--orange);text-decoration:none;font-weight:700">← Back to Website</a></div>
+</div>
+
+<script type="module">
+import { initializeApp } from "firebase/app";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+const firebaseConfig = {
+  apiKey: "AIzaSyCOK3Olh6BETrGSoCFocgYDJjLdKCiHiGo",
+  authDomain: "chesterfield012-919d9.firebaseapp.com",
+  projectId: "chesterfield012-919d9",
+  storageBucket: "chesterfield012-919d9.firebasestorage.app",
+  messagingSenderId: "935942588458",
+  appId: "1:935942588458:web:d6fc818f9900ee323f1b53",
+  measurementId: "G-DD79XQQ9NY"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+window.save = async function(){
+  if(document.getElementById('pin').value!=='1234'){document.getElementById('msg').innerHTML='<div class="ok" style="background:#fef2f2;border-color:#fecaca;color:#991b1b">Wrong PIN! Use 1234</div>';return;}
+  let id=document.getElementById('id').value.trim().toUpperCase();
+  if(!id){alert('Enter Tracking ID!');return;}
+  let data={
+    customer:document.getElementById('customer').value,
+    from:document.getElementById('from').value,
+    to:document.getElementById('to').value,
+    item:document.getElementById('item').value,
+    status:document.getElementById('status').value,
+    phone:document.getElementById('phone').value,
+    driver:"Chester - 065 581 2089 - Toyota Hilux GD-6",
+    created:new Date().toISOString(),
+    project:"chesterfield012-919d9"
+  };
+  try{
+    await setDoc(doc(db,"shipments",id),data);
+    document.getElementById('msg').innerHTML=`<div class="ok">✅ SAVED! <b>${id}</b> is now LIVE in Firebase Cloud! <br>Customer can track it on homepage. <br><br>Try it: <a href="index.html" style="color:#166534;font-weight:800">Go Track Now →</a></div>`;
+    document.getElementById('demoId').innerText=id;
+  }catch(e){document.getElementById('msg').innerHTML=`❌ Error: ${e.message}<br>Set Firestore Rules to: allow read, write: if true;`;}
+}
+</script>
+</body>
+</html>

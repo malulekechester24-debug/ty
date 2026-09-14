@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Shipment - Chester Logistics</title>
+<link href="https://secure-web.cisco.com/17mO4nZotIWEfcKV67Ik9GHgl9Hrg16OrYsM2bMvbOEJkRzlDLZ78lp585zFxo0yCtqswizjF3tgaTUER0ANogxwTnAq_QRROOIM5JO7ThWMIvDc_vjZ4wDGCiSbE1YO2n7krVerwB505NAKzQAb9HfpnwnzEFQ93t7P5LqooJiE9URJBR_lZJ2vaWPdbLxDioK50nSnuRoslViS5gaMMVf8CVXSlawbpR80Ros16k8jymHh6akrotQIF7qnqFzH0yo0E1_JfpgYtiPKCbxfG1E8_e_sYy-2mrfePY9zQHc2oiyfzp6101bkeUfih1teEbcZxhnKiafcSOelJ-bQ5oClTxVvzUiQeHqwcpw0oVc0/https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPlus%2BJakarta%2BSans%3Awght%40700%3B800%26family%3DInter%3Awght%40400%3B500%26display%3Dswap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f8fafc;color:#0f172a}
+:root{--dark:#0B2F3A;--orange:#FF6A00}
+.navbar{background:var(--dark);color:white;display:flex;justify-content:space-between;align-items:center;padding:14px 5%;position:sticky;top:0;z-index:999}
+.logo{font-family:'Plus Jakarta Sans';font-size:22px;font-weight:800}.logo span{color:var(--orange)}
+.hero-track{background:linear-gradient(105deg,#071E26,#0B2F3A);padding:60px 5% 40px;color:white;text-align:center}
+.hero-track h1{font-family:'Plus Jakarta Sans';font-size:42px;margin-bottom:12px}
+.hero-track p{color:#94a3b8;max-width:600px;margin:0 auto 24px}
+.search-box{max-width:600px;margin:0 auto;display:flex;gap:10px;background:white;padding:8px;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,0.3)}
+.search-box input{flex:1;border:none;padding:12px 16px;outline:none;font-size:16px;border-radius:8px}
+.search-box button{background:var(--orange);color:white;border:none;padding:12px 24px;border-radius:8px;font-weight:700;cursor:pointer}
+.result{max-width:900px;margin:30px auto;padding:0 5%}
+.card{background:white;border-radius:16px;padding:26px;border:1px solid #e2e8f0;box-shadow:0 8px 30px rgba(0,0,0,0.05);margin-bottom:20px}
+.timeline{position:relative;padding-left:30px}.timeline::before{content:'';position:absolute;left:8px;top:0;width:2px;height:100%;background:#e2e8f0}
+.step{position:relative;margin-bottom:24px}.step::before{content:'';position:absolute;left:-26px;top:4px;width:14px;height:14px;border-radius:50%;background:#e2e8f0;border:3px solid white;box-shadow:0 0 0 2px #e2e8f0}
+.step.active::before{background:var(--orange);box-shadow:0 0 0 2px var(--orange)}.step.done::before{background:#10b981;box-shadow:0 0 0 2px #10b981}
+.badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700}
+.reveal{opacity:0;transform:translateY(20px);transition:.6s}.reveal.active{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="navbar"><div class="logo">Chester<span> Logistics</span></div><div style="display:flex;gap:16px"><a href="index.html" style="color:#cbd5e1;text-decoration:none">Home</a><a href="login.html" style="color:white;text-decoration:none;background:var(--orange);padding:6px 14px;border-radius:6px">Login</a></div></div>
+
+<div class="hero-track">
+<h1>Track Your Shipment</h1>
+<p>Enter your Tracking ID (e.g. CH-2026-001) to see real-time location and delivery status. Updates via WhatsApp.</p>
+<div class="search-box"><input id="trackId" placeholder="Enter Tracking ID e.g. CH-2026-001"><button onclick="doTrack()">Track →</button></div>
+<p style="margin-top:14px;font-size:13px;color:#64748b">Demo IDs: CH-2026-001, CH-2026-002, CH-2026-003</p>
+</div>
+
+<div class="result" id="result" style="display:none">
+<div class="card reveal active" id="infoCard"></div>
+<div class="card reveal active"><h3 style="margin-bottom:16px">Shipment Timeline</h3><div class="timeline" id="timeline"></div></div>
+<div class="card reveal active" style="background:var(--dark);color:white"><h3>Need Help?</h3><p style="color:#94a3b8;margin:10px 0">Contact Chester directly for updates</p><a href="https://secure-web.cisco.com/1pbq0SDZmFQuk9i3jacRbQCTruABjgfy1Zo2DBRn5MLj4as0lrCAHpXy67fBXixb9KCQpgc4-pYvjv6VDNM_VmT73bTDkIPLOX2RycRxyh7PdUsHGICXOpgceTLvjlhnMt9AWKoXax2Na7yvXic1uZN0pSXiyuGzuBTZs1lj22Hop9mTPV88ZW9kFPPcRIrh8UrTmqoRF5-kdsivc_-KxliZ3gfrTTnhvD8CGjr9Zqz3oSiYWHDPqW9ub4lWYgYvFlbQ7godfjt5--FxW9P1AfBEFjVL07CgEtH70v2LyDs05vpcM9Dw1rhj1DURrXLnBqzFd5-l7DZJ7iSiLvlOiMKuQAX7Z3yzbblmEabAt-j4/https%3A%2F%2Fwa.me%2F27655812089" style="background:#25D366;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;display:inline-block">💬 WhatsApp: 065 581 2089</a></div>
+</div>
+
+<script>
+// DEMO DATABASE - In real backend this comes from Firebase / Supabase
+const DB_KEY='chester_shipments';
+function getShipments(){return JSON.parse(localStorage.getItem(DB_KEY)||'[]')}
+function seed(){
+if(getShipments().length>0) return;
+let demo=[
+{id:'CH-2026-001',from:'Alexandra - Pan Africa Mall',to:'Soweto - Pimville',item:'3 Piece Lounge Suite + TV Stand',customer:'Thabo M',phone:'071***1234',status:2,date:'2026-09-11',driver:'Chester - 065 581 2089',weight:'1.2T'},
+{id:'CH-2026-002',from:'Tembisa - Winnie Mandela',to:'Sandton - Morningside',item:'Fridge + Washing Machine',customer:'Sarah K',phone:'082***5678',status:3,date:'2026-09-10',driver:'Chester',weight:'800kg'},
+{id:'CH-2026-003',from:'Midrand - Vorna Valley',to:'Pretoria - Hatfield',item:'Office Desks x4 + Chairs',customer:'Business Solutions Ltd',phone:'083***9012',status:1,date:'2026-09-12',driver:'Chester',weight:'1T'}
+];
+localStorage.setItem(DB_KEY,JSON.stringify(demo));
+}
+seed();
+
+function doTrack(){
+let id=document.getElementById('trackId').value.trim().toUpperCase();
+if(!id){alert('Enter Tracking ID');return;}
+let ships=getShipments();
+let s=ships.find(x=>x.id===id);
+if(!s){alert('Tracking ID not found. Try CH-2026-001');return;}
+document.getElementById('result').style.display='block';
+document.getElementById('infoCard').innerHTML=`
+<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+<div><small style="color:#64748b">TRACKING ID</small><br><b style="font-size:20px">${s.id}</b></div>
+<div><span class="badge" style="background:${s.status===3?'#dcfce7;color:#166534':s.status===2?'#fef3c7;color:#92400e':'#dbeafe;color:#1e40af'}">${['BOOKED','PICKED UP','IN TRANSIT','DELIVERED'][s.status]}</span><br><small>${s.date}</small></div>
+</div>
+<hr style="margin:16px 0;border:none;border-top:1px solid #e2e8f0">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:14px">
+<div><small style="color:#64748b">FROM</small><br><b>${s.from}</b></div>
+<div><small style="color:#64748b">TO</small><br><b>${s.to}</b></div>
+<div><small style="color:#64748b">ITEM</small><br><b>${s.item}</b></div>
+<div><small style="color:#64748b">CUSTOMER</small><br><b>${s.customer} - ${s.phone}</b></div>
+</div>
+`;
+let steps=['Order Booked - Quote Confirmed','Picked Up - Loaded on Hilux GD-6','In Transit - GPS Tracked','Delivered - POD Signed'];
+let html='';
+steps.forEach((label,i)=>{
+let cls=i<s.status?'done':i===s.status?'active':'';
+html+=`<div class="step ${cls}"><b>${label}</b><br><small style="color:#64748b">${i<=s.status?'✓ Completed':''} ${i===0?s.date:''}</small></div>`;
+});
+document.getElementById('timeline').innerHTML=html;
+window.scrollTo({top:500,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
+

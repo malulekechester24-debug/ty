@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chester Logistics Pty Ltd | Moving Possibilities, Delivering Trust</title>
+<link href="https://secure-web.cisco.com/13q-Y0pn0Y1Lk8lbqNRvFHt7w4k6VERRfhScSRy_v5uiJlVYDxZB4GI0EqvCyDmmPFUCQFlsxO-flsvDrQfCKOBlX2xerqWpmCTn5SM1hTZ8AiP_fBjG3jZesZ9wqeBdodXebN3QPxgUK2LFciqQBlW7JX6JWU1E9e9qDlG1hdR4eZOcw-Wz_LfZx8XTdfrkcV60xtOAAzoTV3Wj8ineHKA7TOLNG32ujjv6Uwi0__v6Q2nuuOOI2zBditNHYGHfWepPG2OM4YPVJowqaiKmtEt0VSIXBR-b1ICouvYHa1LUGwvi-qvJwi7icd_c1vHgYSZxndiYL1nxbhE2f4wCv2ZNaOM97P1DrvNQjYird0os/https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPlus%2BJakarta%2BSans%3Awght%40700%3B800%26family%3DInter%3Awght%40400%3B500%3B600%26display%3Dswap" rel="stylesheet">
+<script type="importmap">
+{"imports":{
+"firebase/app":"https://secure-web.cisco.com/1bj-FWB04_XIYCShQRJVtxKdU5qWaKcy1jFD2fHWxMH8h77Q6M7LlRni7a0P40KfuDFDb0jvdlu8DqpI_yowGvWgefgovV3hh7lpvaOwo5TyBlrNzKHPi6lemXzatRCLDJWnNLAwg4t58ZgYcNM0F-da16hDEZbuosf15N4y1Vo1CHLnN86Fg954YP0n9nOVoLDK7-N_YJmB9vfAHOizkhHlO4tsW6Vpg0NYbJCK3IlkpzAO1cOSiyviBs8wAYgGJkKDgFstYENtWAf6SETzYLNZqZdEAVE5ZRJGCKRLqWhJP82-884aoUTPv9QlpspgABPKY_kn4q48_sHCxckAMcgaBsMIN5Yzj1Fk0Mfm4Iw8/https%3A%2F%2Fwww.gstatic.com%2Ffirebasejs%2F10.7.1%2Ffirebase-app.js",
+"firebase/firestore":"https://secure-web.cisco.com/1THnkouA5pwRxZSIdgbZB0R1BM95FXXNVlf-ZO1SFN72gaUrQ8co56kPHATt5CP0UTU3LlO2zH0zNI--4H1WGfenORzLkcN0l4L7vjBbpweNdxi_ZJdP8Y_NggfonJpGNcbbCS3f05aZ-2A0yNDTn9P24OTwiHQwEmiFpa2xM71Jd7L3zoHgPZ5eoSuGoBGM3Q2TTlguWwMtt_-ghmGBN2AAH5XC0He5O8YSVrXOGf-nO7CYzAOpoljx1ZVNgq2ks012IddlimV5fmu2RMtOvZF8l8CBiZsm8A-h6HCZ9l3VPHpXGSg9aKBvpxJWaLQwij_KeaHEx1nxblHqLFvoTbxDd7m9u5F_fXzfAWJP9rvc/https%3A%2F%2Fwww.gstatic.com%2Ffirebasejs%2F10.7.1%2Ffirebase-firestore.js"
+}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:#f8fafc;overflow-x:hidden;color:#0f172a}
+:root{--dark:#0B2F3A;--orange:#FF6A00}
+.top-bar{background:white;color:#444;font-size:12px;display:flex;justify-content:space-between;align-items:center;padding:8px 5%;border-bottom:1px solid #eee;flex-wrap:wrap;gap:6px}
+.navbar{background:var(--dark);color:white;display:flex;justify-content:space-between;align-items:center;padding:0 0 0 5%;position:sticky;top:0;z-index:9999}
+.logo{font-family:'Plus Jakarta Sans';font-size:24px;font-weight:800}.logo span{color:var(--orange)}
+.nav-links{display:flex;gap:26px;padding:18px 0}.nav-links a{color:#cbd5e1;text-decoration:none;font-size:14px}.nav-links a.active{color:white;border-bottom:3px solid var(--orange);padding-bottom:18px}
+.nav-right{display:flex;align-items:center;background:var(--orange);clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);padding:16px 24px 16px 36px;gap:20px}
+.call{display:flex;align-items:center;gap:10px}.call-icon{width:36px;height:36px;background:rgba(0,0,0,0.2);border-radius:50%;display:grid;place-items:center}
+.btn-top{background:var(--dark);color:white;padding:10px 18px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:700}
+/* TRACKING BAR - NEW FIREBASE LIVE */
+.track-bar{background:white;border-bottom:3px solid var(--orange);padding:14px 5%;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;box-shadow:0 4px 12px rgba(0,0,0,.08);position:sticky;top:54px;z-index:999}
+.track-bar b{color:var(--dark)}.track-bar input{padding:10px 14px;border:2px solid #e2e8f0;border-radius:8px;width:260px}.track-bar button{background:var(--dark);color:white;border:0;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer}
+.hero{background:linear-gradient(105deg,#071E26 0%,#0B2F3A 50%,#123D4A 100%);min-height:82vh;position:relative;overflow:hidden;display:flex;align-items:center;padding:60px 5%;color:white}
+.hero::after{content:'';position:absolute;bottom:0;right:0;width:100%;height:14px;background:var(--orange)}
+.hero-left{max-width:620px;z-index:2;position:relative}
+.badge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:12px;display:inline-flex;gap:8px;margin-bottom:18px}
+.badge::before{content:'•';color:var(--orange);font-size:18px}
+.hero h1{font-family:'Plus Jakarta Sans';font-size:clamp(34px,5vw,56px);font-weight:800;line-height:1.05;margin-bottom:16px}
+.hero p{color:#94a3b8;font-size:15px;line-height:1.7;max-width:500px;margin-bottom:26px}
+.btn-hero{background:var(--orange);color:white;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-flex;gap:10px;align-items:center}
+.hero-right{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:44%;max-width:560px;z-index:2}
+.hero-card{background:white;border-radius:16px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,0.4);color:#0f172a}
+.hero-card img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.2,.8,.2,1)}.reveal.active{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-50px);transition:all .8s ease}.reveal-left.active{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(50px);transition:all .8s ease}.reveal-right.active{opacity:1;transform:translateX(0)}
+.delay-1{transition-delay:.15s}.delay-2{transition-delay:.3s}.delay-3{transition-delay:.45s}
+.wrap{max-width:1250px;margin:auto;padding:80px 5%}
+.title-area{text-align:center;margin-bottom:48px}.title-area .small{color:var(--orange);font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.title-area h2{font-family:'Plus Jakarta Sans';font-size:clamp(28px,4vw,40px);font-weight:800}
+.title-area p{color:#64748b;max-width:600px;margin:12px auto 0;line-height:1.6}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+.about-card{background:white;border-radius:16px;padding:26px;border:1px solid #e2e8f0;box-shadow:0 8px 30px rgba(0,0,0,0.04);position:relative}
+.about-card::before{content:'';position:absolute;left:0;top:0;width:4px;height:100%;background:var(--orange);border-radius:16px 0 0 16px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.stat{background:var(--dark);color:white;padding:18px;border-radius:12px;text-align:center}.stat b{font-size:26px;color:var(--orange);display:block}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.s-card{background:white;border-radius:16px;padding:26px;border:1px solid #e2e8f0;transition:.4s}.s-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.1);border-color:var(--orange)}
+.s-card .icon{width:54px;height:54px;background:linear-gradient(135deg,var(--orange),#ff8a3d);border-radius:12px;display:grid;place-items:center;font-size:24px;color:white;margin-bottom:16px}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.c-info{background:var(--dark);color:white;border-radius:16px;padding:28px;position:relative;overflow:hidden}
+.c-box{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px;display:flex;gap:14px;margin:12px 0}
+.c-form{background:white;border-radius:16px;padding:26px;border:1px solid #e2e8f0;box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.c-form input,.c-form textarea{width:100%;padding:12px 14px;border:1px solid #e2e8f0;border-radius:10px;margin:7px 0;font-family:inherit;outline:none}
+.c-form input:focus,.c-form textarea:focus{border-color:var(--orange)}
+.c-form button{background:var(--orange);color:white;border:none;padding:13px;width:100%;border-radius:10px;font-weight:700;cursor:pointer;margin-top:8px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gal-card{border-radius:16px;overflow:hidden;height:280px;position:relative}.gal-card img{width:100%;height:100%;object-fit:cover;transition:.6s}.gal-card:hover img{transform:scale(1.08)}.gal-over{position:absolute;bottom:0;left:0;width:100%;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:18px;color:white}
+footer{background:#071e26;color:#94a3b8;padding:50px 5% 18px}.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;max-width:1250px;margin:auto}.f-grid h4{color:white;margin-bottom:14px;font-family:'Plus Jakarta Sans'}
+.f-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:36px;padding-top:16px;text-align:center;font-size:13px}
+@media(max-width:900px){.nav-links{display:none}.nav-right{clip-path:none;width:100%;margin-top:10px;border-radius:8px;justify-content:space-between}.hero{flex-direction:column;padding-bottom:40px;min-height:auto}.hero-right{position:relative;right:auto;top:auto;transform:none;width:100%;margin-top:30px}.about-grid,.contact-wrap,.f-grid,.gal{grid-template-columns:1fr}.top-bar{justify-content:center}.track-bar{top:0}}
+</style>
+</head>
+<body>
+<div class="top-bar">
+<span>⏰ Mon - Sat 6AM - 9PM | Sun Closed Late</span>
+<span>📍 Pan Africa Mall, Alexandra, Johannesburg</span>
+<span>REACH US: WhatsApp 065 581 2089</span>
+</div>
+<div class="navbar">
+<div class="logo">Chester<span> Logistics</span></div>
+<div class="nav-links">
+<a href="#home" class="active">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Fleet</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="nav-right">
+<div class="call"><div class="call-icon">📞</div><div style="line-height:1.2"><small style="font-size:11px">Call Anytime</small><br><b>065 581 2089</b></div></div>
+<a href="#contact" class="btn-top">REQUEST A QUOTE</a>
+</div>
+</div>
+
+<div class="track-bar">
+<b>🔍 Track Shipment (Firebase LIVE):</b>
+<input id="trackId" placeholder="CH-2026-001">
+<button onclick="doTrack()">Track Now</button>
+<span id="trackResult" style="font-size:13px"></span>
+</div>
+
+<section id="home" class="hero">
+<div class="hero-left reveal">
+<div class="badge">Chester Logistics Pty Ltd - Firebase Connected</div>
+<h1>Welcome To Chester Logistics Transport Services</h1>
+<p>Fast, Reliable, and Affordable Logistics Solutions across South Africa. Based in Alexandra, Soweto, Tembisa - Delivering Nationwide with Toyota Hilux. Moving Possibilities, Delivering Trust.</p>
+<a href="https://secure-web.cisco.com/1AxLgZe69wJFXsawmEyaaVd0fAkvRgxAZTEMpo2QFZG8dJCNEHA8nNhyo9-2RnikrAFs0jbcjh0bfRW5o0vKjRH_RYlXQbeBtDc9U0auLuaMJDk42Xr9Vs_4hHOKD2gWn9mEUvCTmulAc9lTFKAFM7AkL5L2G_GGhyaAiyiHlhwLZpa1a7czc5konu1acb7-66bo-xi2ySkqlo2E3FsDzuhOq81KWlf9zlU1C0rry_zYiKNeSRthwNBGNhFvwwzdgfLHUnoiVGVKbOpojdtlqDqToRomFQZrrGucy76oMFY9VRe9X-0JLXrx6Cl53btOV1CZBmZniUydhaRxk4OeW0Y8phsz9BWhT1wGycm6moKM/https%3A%2F%2Fwa.me%2F27655812089" class="btn-hero">Contact Chester ✓</a>
+<div style="margin-top:28px;display:flex;gap:18px;font-size:13px;color:#cbd5e1;flex-wrap:wrap">
+<span>⭐ 100+ Deliveries</span><span>🚚 Same Day</span><span>📍 GPS Tracked</span><span>💬 WhatsApp Support</span>
+</div>
+</div>
+<div class="hero-right reveal-right delay-2">
+<div class="hero-card">
+<img src="https://secure-web.cisco.com/10stPDfhqKHYlmrPwIGtWk5rKo-WBXasjeSSnSGBgIbjezyy5-jFpA_j5OLsqULiBEg-cazQ804U1cXMEsaxovhuOd48EXZB2_Voqh0pM7eHHgkbGOlQW4LmV1ASnsOBDkaGJpOyCuQXO0loRfY1V5eF4c8cHinYLBDaLqUTCzfLtkCO6ONxETSROuWfajZ4KJmN494_afKWWGI6qMWWkyrp8S666D6qDM6QPugE5pd21EFuhMlPkKMmpXai4YC6LNVsSXp1Bhen-KedrdubNSDPbcECjmruR6hbRGfwT_AmdG7BKjrbeC0mXbkr5RuE1xBvvzEnT0uqaCaZBo4AmW-gWYtWJvUEtIZN9hxy0bi0/https%3A%2F%2Fimages.unsplash.com%2Fphoto-1586528116311-ad8dd3c8310d%3Fauto%3Dformat%26fit%3Dcrop%26w%3D800%26q%3D80" alt="Chester Truck">
+<div style="padding:14px 4px 4px">
+<span style="background:var(--orange);color:white;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700">TOYOTA HILUX GD-6 - 1.2 TON</span>
+<h3 style="margin:10px 0 6px;font-family:'Plus Jakarta Sans'">Same Day Delivery - Gauteng & Nationwide</h3>
+<p style="color:#64748b;font-size:13px;line-height:1.5">Toyota Hilux 1.2 Tonne capacity. Furniture blankets, trolley, straps. Insured & secure. Mon-Sun 6AM-9PM.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px">
+<div style="background:#f1f5f9;padding:10px;border-radius:8px;text-align:center"><b style="color:var(--orange)">Alex</b><br><small>Soweto Tembisa</small></div>
+<div style="background:#f1f5f9;padding:10px;border-radius:8px;text-align:center"><b style="color:var(--orange)">JHB</b><br><small>Midrand Sandton</small></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="wrap" id="about">
+<div class="title-area reveal">
+<div class="small">About Chester Logistics</div>
+<h2>Proudly South African Logistics Since 2022</h2>
+<p>From one Toyota Hilux in Alexandra to 100+ happy clients across Gauteng - built on trust and on-time delivery.</p>
+</div>
+<div class="about-grid">
+<div class="reveal-left">
+<div class="about-card">
+<h3>🏢 Our Background</h3>
+<p style="color:#475569;line-height:1.7;margin-top:8px">Chester Logistics Pty Ltd was established in 2022 with the vision of providing reliable, efficient, and customer-focused transportation. Starting with a single Toyota Hilux in Alexandra Township, our company has grown through dedication, professionalism, and word of mouth.</p>
+<div class="stats">
+<div class="stat"><b>100+</b>Deliveries Done</div>
+<div class="stat"><b>1.2T</b>Load Capacity</div>
+<div class="stat"><b>24/7</b>WhatsApp Support</div>
+<div class="stat"><b>99%</b>On-Time Rate</div>
+</div>
+</div>
+</div>
+<div class="reveal-right">
+<div class="about-card" style="margin-bottom:18px"><h3>🎯 Our Mission</h3><p style="color:#475569;line-height:1.6;margin-top:8px">To provide fast, secure, and cost-effective logistics solutions that empower small businesses, entrepreneurs, and individuals while maintaining the highest standards of professionalism and reliability.</p></div>
+<div class="about-card" style="margin-bottom:18px"><h3>👁️ Our Vision</h3><p style="color:#475569;line-height:1.6;margin-top:8px">To become South Africa's most trusted township-based logistics brand by delivering innovative transportation solutions and contributing to economic growth.</p></div>
+<div class="about-card"><h3>💎 Why Choose Us</h3><p style="color:#475569;line-height:1.8;margin-top:8px">✅ Local - Alex, Soweto, Tembisa<br>✅ Toyota Hilux GD-6 Reliable<br>✅ 100+ deliveries & counting<br>✅ After hours & weekends<br>✅ Pay after delivery for trusted clients<br>✅ Real-time WhatsApp tracking</p></div>
+</div>
+</div>
+</div>
+
+<div style="background:white">
+<div class="wrap" id="services">
+<div class="title-area reveal"><div class="small">Our Professional Services</div><h2>Complete Logistics Solutions</h2><p>Affordable pricing, no hidden costs, same-day quotes.</p></div>
+<div class="services-grid">
+<div class="s-card reveal delay-1"><div class="icon">📦</div><h3>Local Deliveries</h3><p>Fast door-to-door delivery within Alexandra, Soweto, Tembisa, Midrand, Sandton, JHB CBD, and surrounding areas.</p><small style="color:var(--orange);font-weight:700">→ From R250</small></div>
+<div class="s-card reveal delay-2"><div class="icon">🚛</div><h3>Freight Transport</h3><p>Bulk goods, equipment, stock, furniture throughout Gauteng and nationwide. Safe handling up to 1.2 tonnes.</p><small style="color:var(--orange);font-weight:700">→ Toyota Hilux GD-6</small></div>
+<div class="s-card reveal delay-3"><div class="icon">⚡</div><h3>Same-Day & After Hours</h3><p>Express delivery ensures quick pickups and same-day deliveries for time-sensitive shipments.</p><small style="color:var(--orange);font-weight:700">→ 2 Hour Pickup</small></div>
+<div class="s-card reveal delay-1"><div class="icon">🏢</div><h3>Business Logistics</h3><p>Tailored for small businesses, wholesalers, retailers, online stores requiring reliable regular support.</p><small style="color:var(--orange);font-weight:700">→ Weekly Contracts</small></div>
+<div class="s-card reveal delay-2"><div class="icon">🛒</div><h3>Courier & E-Commerce</h3><p>Online orders, cash-on-delivery, proof-of-delivery photos, customer signatures, and fulfillment.</p><small style="color:var(--orange);font-weight:700">→ POD + Photos</small></div>
+<div class="s-card reveal delay-3"><div class="icon">🏠</div><h3>Moving & Distribution</h3><p>Affordable residential and office moving for furniture, appliances, household items throughout Gauteng.</p><small style="color:var(--orange);font-weight:700">→ Blankets & Trolley Included</small></div>
+</div>
+</div>
+</div>
+
+<div class="wrap" id="gallery">
+<div class="title-area reveal"><div class="small">Our Fleet & Operations</div><h2>Professional Fleet - Ready For You</h2></div>
+<div class="gal">
+<div class="gal-card reveal delay-1"><img src="https://secure-web.cisco.com/1hHVTVa16_NeoLnRG5O8V3qwYDU_q6EuvAjHg_YVHKy_WjP-YeSXM-bkcf0exFRHt1VfxEL2FXuHeaIMW4cIiQ_jd-wSq--6yDpP8nHr_QuCVrBOFs6mEFcrDIKrgx52-ZIBn_nKGQLWF8lY-B1msQ--gmnJu0KRXxDukXqJO5eLLzoSJPEBWQ7BxZQc5FrjPda2pfxQGDDiRaIxo7D-mqQ4CFkDuGvStaDlui_PzW520GgY0M2uLr53HD74hTnGMdPj64rHQxXKrC5qjJyrGElFeUW398QhHO1EPzGwgb_C_mKjoWDht6yCE3dcmXzRYIOsUPc_She8tVSUNyCTLpWjrmxko9KqwBrcLufFxp4k/https%3A%2F%2Fimages.unsplash.com%2Fphoto-1486406146926-c627a92ad1ab%3Fw%3D800"><div class="gal-over"><span style="background:var(--orange);padding:4px 10px;border-radius:20px;font-size:11px">HEAD OFFICE</span><h3 style="margin-top:8px">Head Office - Alexandra</h3><p style="font-size:12px;opacity:.8">Pan Africa Mall | 065 581 2089</p></div></div>
+<div class="gal-card reveal delay-2"><img src="https://secure-web.cisco.com/1cBzDkMxMFbHhSMwkF67P41LEgw4dq68_E60Ri9J8a2P_EDagPs4ZtmD9fWdoJ_835By1cS5gUE7jkx1KeN5-UiBGGu2VWlk7JxRaSsvDrZWlhfXlpMALtPzM1eCUJQC-ASVln1vxX2vJPUHc1CTmsYaW_11qyj-px5cQ73uGPhFHwjULOAfX1aayH-7oZQFa6CE7e9AC3ivCi_SZBP0o6eziSWjyFaegVQ8DpedSToRayRm_KveLTupvufqsnG-QPaLW8EKrVpZVcvqtv1ReYX9GOSYwXpUY0k3c08SfLFm2a6AT1deBXFaXEOM84OI-qV356TIvSxmoiEwGevwpL_hX1NXqXhMzyS8wc--Kid8/https%3A%2F%2Fimages.unsplash.com%2Fphoto-1616432043562-3671ea2e5242%3Fw%3D800"><div class="gal-over"><span style="background:var(--orange);padding:4px 10px;border-radius:20px;font-size:11px">OUR FLEET</span><h3 style="margin-top:8px">Toyota Hilux GD-6</h3><p style="font-size:12px;opacity:.8">GPS-tracked, insured, blankets, trolley</p></div></div>
+<div class="gal-card reveal delay-3"><img src="https://secure-web.cisco.com/1DkNqjJqscW7h_ust5RG3jvViEzMU8aNaDMpzMndTLAIWwVFUnyiYcZ5QQHNZdgpDmuhdJPVKEGI9TcJKdbTc5Dpbs4EGVQFY2WR3k0SMhXP7dcYSIhMxEnkvHGCsiZ2RCGialRmp_itHSx2ndIilGFoYGWwY3zM23Q8E7Es4LFKIMacG89zK24EvEw8_d8uV72EPCQWzQquVJTjKno_GuXyylhDK7urOHLk-V3ovEkajeTHSgeNUt545YPZhRkGb7egJdim3jyu2-QDzniU-t3qSS9trpV0ZtwMHAdd9oC68_kqdYaun1IZBHFZxIJu8s5l18Looc0q1Z2ZtGRg7guTKr0mg-Q-xXblm7ugNU-4/https%3A%2F%2Fimages.unsplash.com%2Fphoto-1586528116311-ad8dd3c8310d%3Fw%3D800"><div class="gal-over"><span style="background:var(--orange);padding:4px 10px;border-radius:20px;font-size:11px">WAREHOUSE</span><h3 style="margin-top:8px">Secure Storage</h3><p style="font-size:12px;opacity:.8">CCTV 24/7, short & long-term</p></div></div>
+</div>
+</div>
+
+<div style="background:#f1f5f9">
+<div class="wrap" id="contact">
+<div class="title-area reveal"><div class="small">Contact Us</div><h2>Get Your Free Quote Today</h2><p>Reply within 5 minutes on WhatsApp. No hidden fees.</p></div>
+<div class="contact-wrap">
+<div class="c-info reveal-left">
+<h3 style="font-family:'Plus Jakarta Sans';font-size:26px;margin-bottom:12px">Let's Move Your Goods Today</h3>
+<p style="opacity:.85;line-height:1.6;margin-bottom:18px">Fast, Reliable, Affordable Logistics Solutions across South Africa.</p>
+<div class="c-box"><div style="width:44px;height:44px;background:var(--orange);border-radius:10px;display:grid;place-items:center">📞</div><div><small style="opacity:.7">Call / WhatsApp</small><br><b>065 581 2089 - Chester</b><br><small style="opacity:.7">Mon-Sun 6AM - 9PM</small></div></div>
+<div class="c-box"><div style="width:44px;height:44px;background:var(--orange);border-radius:10px;display:grid;place-items:center">📧</div><div><small style="opacity:.7">Email</small><br><b>malulekchester24@gmail.com</b></div></div>
+<div class="c-box"><div style="width:44px;height:44px;background:var(--orange);border-radius:10px;display:grid;place-items:center">📍</div><div><small style="opacity:.7">Service Areas</small><br><b>Alex, Soweto, Tembisa, Midrand, Sandton, Pretoria + Long Distance</b></div></div>
+<div style="margin-top:18px"><a href="https://secure-web.cisco.com/1AxLgZe69wJFXsawmEyaaVd0fAkvRgxAZTEMpo2QFZG8dJCNEHA8nNhyo9-2RnikrAFs0jbcjh0bfRW5o0vKjRH_RYlXQbeBtDc9U0auLuaMJDk42Xr9Vs_4hHOKD2gWn9mEUvCTmulAc9lTFKAFM7AkL5L2G_GGhyaAiyiHlhwLZpa1a7czc5konu1acb7-66bo-xi2ySkqlo2E3FsDzuhOq81KWlf9zlU1C0rry_zYiKNeSRthwNBGNhFvwwzdgfLHUnoiVGVKbOpojdtlqDqToRomFQZrrGucy76oMFY9VRe9X-0JLXrx6Cl53btOV1CZBmZniUydhaRxk4OeW0Y8phsz9BWhT1wGycm6moKM/https%3A%2F%2Fwa.me%2F27655812089" style="background:#25D366;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;margin-right:10px">💬 WhatsApp Now</a><a href="tel:0655812089" style="background:var(--orange);color:white;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block">📞 Call Now</a></div>
+</div>
+<div class="c-form reveal-right">
+<h3 style="font-family:'Plus Jakarta Sans';margin-bottom:14px">Request Free Quote - 2 Min Reply</h3>
+<input id="qName" placeholder="Your Name *">
+<input id="qPhone" placeholder="Phone e.g. 0655812089 *">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<input id="qFrom" placeholder="From - e.g. Alexandra *">
+<input id="qTo" placeholder="To - e.g. Soweto *">
+</div>
+<textarea id="qWhat" rows="4" placeholder="What to deliver? e.g. 3 piece lounge suite *"></textarea>
+<button onclick="sendQuote()">Send Quote via WhatsApp →</button>
+<p style="font-size:11px;color:#94a3b8;text-align:center;margin-top:10px">🔒 Safe & Secure. No spam. | Firebase: chesterfield012-919d9 LIVE</p>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="f-grid">
+<div><div class="logo" style="margin-bottom:10px">Chester<span> Logistics</span></div><p>Affordable, reliable moving company in Alexandra. Dedicated to on-time delivery, safety, and Moving Possibilities, Delivering Trust. 100+ happy clients.</p><p style="margin-top:12px"><a href="admin.html" style="color:#555;text-decoration:none;font-size:11px">Admin</a></p></div>
+<div><h4>Quick Links</h4><p style="margin-top:8px"><a href="#home" style="color:#cbd5e1;text-decoration:none">Home</a></p><p style="margin-top:8px"><a href="#about" style="color:#cbd5e1;text-decoration:none">About Us</a></p><p style="margin-top:8px"><a href="#services" style="color:#cbd5e1;text-decoration:none">Services</a></p><p style="margin-top:8px"><a href="#contact" style="color:#cbd5e1;text-decoration:none">Contact & Quote</a></p></div>
+<div><h4>Contact Us</h4><p>📍 Alexandra, Johannesburg</p><p style="margin-top:8px">📞 065 581 2089</p><p style="margin-top:8px">✉️ malulekchester24@gmail.com</p><p style="margin-top:8px">🕒 Mon-Sat: 7am - 7pm</p></div>
+</div>
+<div class="f-bottom">© 2026 Chester Logistics Pty Ltd. All rights reserved. Moving Possibilities, Delivering Trust. | Firebase LIVE</div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')})},{threshold:.15});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+function sendQuote(){
+let n=document.getElementById('qName').value.trim(),p=document.getElementById('qPhone').value.trim(),f=document.getElementById('qFrom').value.trim(),t=document.getElementById('qTo').value.trim(),w=document.getElementById('qWhat').value.trim();
+if(!n||!p||!f||!t||!w){alert('Please fill all fields!');return}
+let msg=`NEW QUOTE - CHESTER LOGISTICS%0AName: ${n}%0APhone: ${p}%0AFrom: ${f}%0ATo: ${t}%0AWhat: ${w}`;
+window.open(`https://secure-web.cisco.com/1EbABxMpPQH_hl_y54B5qj5lVxhRNv9SY-HkZwdEOFBVJpP3uKorb2gpZb4TtDHoBQmY29-qMANjc3Uh_apef2Wv8Qd7ZcXKzio0kQx_AYQrB0DaZF-9ep_SJm3Lqj_t-DlrzTSp7Vh1SqFsmB7pMJr5WgkTNmNInj3c2Fb6T0BJSPQHG_aDmEvNRQ7hyuSfPBAOuZdi-GI44iLnnroQypQYvtp6LtUyBYQzwU2peh6sOTOjxF7XftElXpHiqvS9BDl8F3ZRx6u__afOt5s-5bM4kMxxw85h2ctBvveBUQX-J4xNWp4pYzaxLUgZKqJgFIqEY3PLiiL8rHLep67X8Co2gaXaEnkdWe76cLWHzwUk/https%3A%2F%2Fwa.me%2F27655812089%3Ftext%3D%24%7Bmsg%7D%60%2C%27_blank%27`);
+}
+</script>
+
+<script type="module">
+// ===== FIREBASE CONFIG - YOUR REAL CONFIG ADDED HERE =====
+import { initializeApp } from "firebase/app";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCOK3Olh6BETrGSoCFocgYDJjLdKCiHiGo",
+  authDomain: "chesterfield012-919d9.firebaseapp.com",
+  projectId: "chesterfield012-919d9",
+  storageBucket: "chesterfield012-919d9.firebasestorage.app",
+  messagingSenderId: "935942588458",
+  appId: "1:935942588458:web:d6fc818f9900ee323f1b53",
+  measurementId: "G-DD79XQQ9NY"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const demo = {
+"CH-2026-001":{customer:"Thabo Molefe",from:"Pan Africa, Alexandra",to:"Pimville, Soweto",item:"3 Piece Lounge Suite",status:"In Transit - Firebase Demo",driver:"Chester 0655812089"},
+"CH-2026-002":{customer:"Nomsa Khumalo",from:"Alexandra",to:"Ivory Park, Tembisa",item:"Double Bed + Fridge",status:"Picked Up",driver:"Chester 0655812089"},
+"CH-2026-003":{customer:"Sipho Dlamini",from:"JHB CBD",to:"Pretoria East",item:"Office Desks x3",status:"Booked",driver:"Chester 0655812089"}
+};
+
+window.doTrack = async function(){
+  let id = document.getElementById('trackId').value.trim().toUpperCase();
+  let r = document.getElementById('trackResult');
+  if(!id){alert('Enter Tracking ID');return;}
+  r.innerHTML = '⏳ Checking Firebase Cloud...';
+  try{
+    const ref = doc(db,"shipments",id);
+    const snap = await getDoc(ref);
+    if(snap.exists()){
+      let d=snap.data();
+      r.innerHTML = `✅ <b>${id}</b> | ${d.customer} | ${d.from} → ${d.to} | <b style="color:#FF6A00">${d.status}</b> | LIVE FROM CLOUD`;
+      alert(`TRACKING FOUND!\n\nID: ${id}\nCustomer: ${d.customer}\nFrom: ${d.from}\nTo: ${d.to}\nItem: ${d.item}\nStatus: ${d.status}\n\nSource: Firebase Cloud - chesterfield012-919d9`);
+    }else if(demo[id]){
+      let d=demo[id];
+      r.innerHTML = `✅ DEMO <b>${id}</b> | ${d.customer} | ${d.status}`;
+      alert(`DEMO TRACKING (Offline)\n\nID: ${id}\nCustomer: ${d.customer}\nFrom: ${d.from}\nTo: ${d.to}\nItem: ${d.item}\nStatus: ${d.status}\n\nCreate this ID in admin.html to make it REAL cloud!`);
+    }else{
+      r.innerHTML = `❌ ${id} not found. Try CH-2026-001`;
+    }
+  }catch(e){
+    console.error(e);
+    r.innerHTML = `❌ Error: ${e.message} - Check Firestore Rules`;
+  }
+}
+</script>
+</body>
+</html>
